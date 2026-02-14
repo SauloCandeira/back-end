@@ -1,3 +1,7 @@
+// DEPRECATED_GATEWAY_DO_NOT_RUN
+// WARNING: This file is legacy. DO NOT USE IN PRODUCTION.
+// Use hktech-ai-gateway/ai-gateway.js for all production and PM2 startup.
+// This file is kept for reference only.
 import express from "express";
 import fs from "fs";
 import path from "path";
