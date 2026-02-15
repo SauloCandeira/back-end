@@ -1,10 +1,10 @@
 import fs from 'fs';
-import path from 'path';
+import * as path from 'path';
 import { Injectable } from '@nestjs/common';
 
 @Injectable()
 export class LoggingService {
-  private logsDir = path.resolve('/root/hktech-ai-gateway/logs');
+  private logsDir = path.resolve(process.env.LOGS_DIR || './logs');
   private systemLogPath = path.join(this.logsDir, 'system.log');
   private agentsLogPath = path.join(this.logsDir, 'agents.log');
 

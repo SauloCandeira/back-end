@@ -1,4 +1,4 @@
-import path from 'path';
+import * as path from 'path';
 
 const openclawHome = process.env.OPENCLAW_HOME || '/root/.openclaw';
 const workspace = process.env.OPENCLAW_WORKSPACE || path.join(openclawHome, 'workspace');

@@ -10,25 +10,30 @@
     "test": "npm run build"
   },
   "dependencies": {
-  "@fastify/cors": "^11.2.0",
-  "@nestjs/common": "^11.1.13",
-  "@nestjs/core": "^11.1.13",
-  "@nestjs/microservices": "^11.1.13",
-  "@nestjs/platform-fastify": "^11.1.13",
+    "@fastify/cors": "^11.2.0",
+    "@nestjs/common": "^11.1.13",
+    "@nestjs/core": "^11.1.13",
+    "@nestjs/microservices": "^11.1.13",
+    "@nestjs/passport": "^11.0.5",
+    "@nestjs/platform-fastify": "^11.1.13",
     "@prisma/client": "^7.4.0",
+    "bcryptjs": "^3.0.3",
     "dotenv": "^16.6.1",
     "fastify": "^4.28.1",
+    "firebase-admin": "^13.6.1",
     "node-fetch": "^3.3.2",
+    "passport": "^0.7.0",
+    "passport-google-oauth20": "^2.0.0",
     "pg": "^8.18.0",
     "prisma": "^7.4.0",
     "reflect-metadata": "^0.2.2",
-  "rxjs": "^7.8.2",
-  "typeorm": "^0.3.28"
+    "rxjs": "^7.8.2",
+    "typeorm": "^0.3.28"
   },
   "devDependencies": {
     "@nestjs/cli": "^10.4.9",
     "@nestjs/schematics": "^10.2.3",
-  "@nestjs/testing": "^11.1.13",
+    "@nestjs/testing": "^11.1.13",
     "@types/node": "^22.10.2",
     "typescript": "^5.7.3"
   }

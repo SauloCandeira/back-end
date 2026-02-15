@@ -3,9 +3,19 @@ import 'reflect-metadata';
 import { NestFactory } from '@nestjs/core';
 import { FastifyAdapter, NestFastifyApplication } from '@nestjs/platform-fastify';
 import cors from '@fastify/cors';
+
 import { AppModule } from './app.module';
+import { AppDataSource } from './database/typeorm.config';
 
 async function bootstrap() {
+    // Inicializa conexão com o banco de dados
+    try {
+      await AppDataSource.initialize();
+      console.log('Conexão com o banco de dados estabelecida com sucesso!');
+    } catch (error) {
+      console.error('Erro ao conectar no banco de dados:', error);
+      process.exit(1);
+    }
   const app = await NestFactory.create<NestFastifyApplication>(
     AppModule,
     new FastifyAdapter({ logger: false }),

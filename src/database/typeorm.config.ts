@@ -1,5 +1,6 @@
 import { DataSource } from 'typeorm';
 import { join } from 'path';
+import { User } from '../modules/auth/user.entity';
 
 export const AppDataSource = new DataSource({
   type: 'postgres',
@@ -8,6 +9,6 @@ export const AppDataSource = new DataSource({
   username: process.env.DB_USER || 'postgres',
   password: process.env.DB_PASS || 'postgres',
   database: process.env.DB_NAME || 'hk_vps_core',
-  entities: [join(__dirname, '../**/*.entity.{ts,js}')],
+  entities: [User, join(__dirname, '../**/*.entity.{ts,js}')],
   synchronize: true, // Em produção, use migrações!
 });
