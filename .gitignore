@@ -60,3 +60,5 @@ yarn.lock
 *.log
 logs/
 tmp/
+
+/generated/prisma

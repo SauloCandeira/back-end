@@ -16,6 +16,7 @@ async function bootstrap() {
     ? process.env.ADMIN_ORIGINS.split(',').map((entry) => entry.trim()).filter(Boolean)
     : [];
 
+  // @ts-ignore
   await app.register(cors, {
     origin: (origin, cb) => {
       if (!origin) return cb(null, true);
